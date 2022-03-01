@@ -1,0 +1,92 @@
+---
+title: "Part 1 Insights"
+author: "Monroe Farris"
+output: html_document
+theme: lumen
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Understanding the Warning Signs of Thrombosis  
+___
+<mark>**Thrombosis**</mark> is a severe complication and one of the leading causes of death in collagen diseases, auto-immune diseases where one generates antibodies that attack their own body. Understanding potential indicators of thrombosis could help reduce the number of fatalities and better inform doctors on best paths of treatment. The below analysis looks at a number of different medical tests administered to a patient and attempts to discern what, if any, indicators there might be to a positive thrombosis diagnosis. 
+
+The analysis will be broken into the following sections: data exploration and data analysis. 
+
+: * The data exploration section will focus on the structure of the data and identifying any potential issues with its composition. 
+* The data anlysis section will then foucs on identifying potential causes of thrombosis in a quantitative manner. 
+
+
+## Exploratory Data Analysis 
+___
+
+Before looking directly at the potential indicators of thrombosis, it is important to understand the data that will be used in the analysis. 
+
+Three main visualizations were used to better understand the data structure and variable interactions: 
+: * pairplot (i.e. plot of pairwise relationships)
+* heatmap 
+* barplot
+
+
+### Data Structure 
+To get a better idea of the composition of the data, the amount of null values were analyzed in two different visual forms: a heatmap and barchart. 
+![](part-1-figures/figure1.png)
+<br>
+</br>
+The heatmap does a good job of drawing the viewer's eye to the darker colored boxes, indicating which variables have the highest amounts of NA values compared to the rest of the variables. This is helpful in understanding which variables might be best to remove due to the lack of avaialable data. 
+<br>
+</br>
+
+![](part-1-figures/figure2.png)
+<br>
+</br>
+This bachart illustrates the sheer amount of missing data present in the dataset. This is important to point out as it will dictate which variables are included in further analysis. Due to the sheer amount of available data, it was decided to use variables with the least amount of null values to continue with the analysis. Therefore, a visualization like the above barchart is extremely helpful for one to get an idea of the distribution of null values across the dataset and allows one to be more informed when making decisions on which variables to drop or keep in the dataset. 
+
+<br>
+</br>
+
+After removing some columns that proved to contain high amount of null values, further exploratory data analysis is conducted to get a better understanding of the distributions of the remaining variables. Since the magnitude of tests used to potentially identify a thrombosis diagnosis is so large, the pairwise plots were split into two different visualizations to improve viewer readability. Below are the pairwise plots. 
+
+<br>
+</br>
+![](part-1-figures/figure3.png)
+
+<br>
+</br>
+The pariwise plot looks at the distribution of each individual variable (as seen on the diagonal histograms) as well as the interaction of each variable with the others (seen with the scatterplots). Additionally, the color indicates the status of thrombosis test, allowing one to see if there are any potential interactions that may seem more indicative of a thrombosis diagnosis than others. 
+<br>
+</br>
+From the distributions of the variables, it seems that Albumin (alb) has a realatively normal distribution and there also appears to be a larger quantity of positive thrombosis tests compared to the other variables. This is important to note as a potential indicator of this condition. 
+<br>
+</br>
+![](part-1-figures/figure4.png)
+<br>
+</br>
+This pariwise plot illustrates the second set of variables remaining in the dataset. 
+
+### Significant Findings 
+
+## Data Analysis
+
+### Research Questions
+
+<br>
+</br>
+![](part-1-figures/figure5.png)
+
+<br>
+</br>
+![](part-1-figures/figure6.png)
+
+<br>
+</br>
+![](part-1-figures/figure7.png)
+
+
+## Overall Commentary and Thoughts 
+
+<br>
+</br>
+Overall, it was much easier to draw conclusions 
